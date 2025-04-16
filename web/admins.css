@@ -1,0 +1,272 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 29 Mar, 2025, 9:15:14 AM
+    Author      : jayjo
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 29 Mar, 2025, 9:15:14 AM
+    Author      : jayjo
+*/
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4b41a;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Changed to flex-start to allow margin at the bottom */
+    min-height: 100vh; /* Use min-height to ensure body covers viewport */
+    box-sizing: border-box;
+    background: linear-gradient(230deg,#18e2fc,#f3f8e3,#ffbf00);
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 45px;
+    background: linear-gradient(230deg,#ffbf00,#626a89,#18e2fc);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+}
+p {
+    transform-origin: center bottom;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    flex-shrink: 0;  /* Ensure the footer does not shrink */
+    margin-top: auto; /* Push footer to the bottom */
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 80%;
+    margin-top: 20px; /* Added margin at the top */
+    margin-bottom: 20px; /* Added margin at the bottom */
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+}
+
+.left-panel {
+/*    width: 55%;
+    background-color: #ddd;
+    border-radius: 5px;
+    background-color: transparent;*/
+
+    width: 55%; /* Adjusted for the left side (table) */
+    background-color: rgba(255, 255, 255, 0.8);
+    /*background-color: transparent;*/
+    padding: 20px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: #555;
+    background: linear-gradient(230deg,#ffbf00,#626a89,#18e2fc);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    white-space: nowrap;
+}
+p {
+    transform-origin: center bottom;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    flex-shrink: 0;  /* Ensure the footer does not shrink */
+    margin-top: auto; /* Push footer to the bottom */
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+.right-panel {
+    width: 40%;
+    background-color: #f4b41a;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #626a89;
+    background: transparent;
+}
+
+.right-panel form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block; /* Make labels take full width */
+    margin-bottom: 5px; /* Add some space below labels */
+}
+input, select {
+    padding: 10px; /* Increased padding for better touch/click area */
+    margin-top: 5px;
+    margin-bottom: 15px; /* Increased bottom margin for spacing between fields */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Slightly more rounded corners */
+    outline: none; /* Removed default focus outline */
+    box-sizing: border-box; /* Ensure padding doesn't increase element width */
+    width: 100%; /* Make input fields take full width of the right panel */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease; /* Added transition for transform */
+}
+
+input:focus, select:focus {
+    border-color: #007bff; /* Add a subtle focus border color */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle focus shadow */
+    transform: scale(1.02); /* Subtle scale up on focus */
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px; /* Increased top margin for buttons */
+}
+button {
+    padding: 12px 25px; /* Further increased padding for a more prominent look */
+    border: none;
+    cursor: pointer;
+    font-weight: 500; /* Slightly lighter font weight for a modern feel */
+    color: #fff; /* White text for better contrast on background */
+    border-radius: 8px; /* More rounded corners for a softer look */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover and click effects */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Aesthetic button colors (you can customize these) */
+button[name="action"][value="save"] {
+    background-color: #28a745; /* Green for Save */
+}
+
+button[name="action"][value="update"] {
+    background-color: #007bff; /* Blue for Update */
+}
+
+button[name="action"][value="delete"] {
+    background-color: #e1c701; 
+}
+button[type="reset"] {
+    background-color: #dc3545; /* Red for Reset */
+}
+
+button[type="button"] {
+    background-color: #6c757d; /* Gray for Close */
+}
+button:hover {
+    opacity: 0.9; /* Slightly reduce opacity on hover */
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+button:active {
+    transform: translateY(0); /* Remove lift effect on active (click) */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Reduce shadow on active */
+}
+button#saveButton:disabled {
+    opacity: 0.5; /* Make the button semi-transparent */
+    cursor: not-allowed; /* Change the cursor to indicate it's not clickable */
+    background-color: #cccccc; /* Optional: Gray background */
+    color: #666666; /* Optional: Gray text */
+    border-color: #999999; /* Optional: Gray border */
+}
+
+/* Optional: Ensure hover effect is removed on disabled button */
+button#saveButton:disabled:hover {
+    opacity: 0.5;
+    transform: translateY(0); /* Disable the hover lift effect */
+    background-color: #cccccc; /* Keep the disabled background color */
+}
+
+button#updateButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #cccccc;
+    color: #666666;
+    border-color: #999999;
+}
+
+button#updateButton:disabled:hover {
+    opacity: 0.5;
+    transform: translateY(0);
+    background-color: #cccccc;
+}
+
+button#deleteButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #cccccc;
+    color: #666666;
+    border-color: #999999;
+}
+
+button#deleteButton:disabled:hover {
+    opacity: 0.5;
+    transform: translateY(0);
+    background-color: #cccccc;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /*background: rgba(238, 238, 238, 0.8);*/
+    background-color: transparent;
+    border-radius: 8px;
+    border: 0px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.11);    
+    overflow: hidden;
+}
+
+th, td {
+    border-spacing: 0;
+    /*border-bottom: 1px solid #ddd;*/
+    border: none
+}
+td{
+    text-align: center;
+     padding: 10px 10px;
+}
+
+thead{
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25); 
+}
+th {
+     padding: 9px 10px;
+     justify-content: center;
+    align-items: center;
+    /*background-color: #f5f5f5;*/
+    font-weight: bold;
+    color: #333;
+}
+
+tbody tr:nth-child(even){
+    background-color: lightgrey;
+}

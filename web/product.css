@@ -1,0 +1,280 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fdd835; /* Fallback color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align items from the top */
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: linear-gradient(230deg,#18e2fc,#fefeff,#ffbf00); /* Same gradient as manageAdmins */
+    padding-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 58px;
+    font-weight: bold;
+    margin-bottom: 28px;
+    margin-top: 30px;
+    background: linear-gradient(230deg,#ffbf00,#626a89,#18e2fc);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Keep space-between for left and right panels */
+    width: 80%;
+    max-width: 1200px; /* Adjust as needed */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    padding: 30px;
+    /* Ensure items are not overlapping */
+    align-items: flex-start;
+}
+
+p {
+    transform-origin: center bottom;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    flex-shrink: 0;  /* Ensure the footer does not shrink */
+    margin-top: auto; /* Push footer to the bottom */
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Adjustments for Product Management Layout */
+.product-form {
+    width: 40%; /* Adjusted for the right side (form) */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    /* Add margin to separate from the table */
+    margin-left: 20px;
+}
+.product-table-container {  
+    width: 55%; /* Keep the defined width */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    min-width: 400px; /* Adjust this value as needed */ 
+}
+.table-wrapper {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #555;
+    background: linear-gradient(230deg,#ffbf00,#626a89,#18e2fc);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    white-space: nowrap;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    transform: scale(1.02);
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+button {
+    padding: 12px 25px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Button colors - adjust as needed */
+button[type="submit"] {
+    background-color: #28a745; /* Save and Update button color */
+}
+
+/* Assuming the first submit button is Save and others are Update */
+.button-group button[type="submit"]:nth-of-type(1) {
+    background-color: #28a745; /* Save button color */
+}
+
+.button-group button[type="submit"]:nth-of-type(2) {
+    background-color: #007bff; /* Update button color */
+}
+
+button[type="button"] {
+    background-color: #e007ef; /* Close button color */
+}
+
+button[type="reset"] {
+    background-color: #dc3545; /* Reset button color */
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+button#saveButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #cccccc;
+    color: #666666;
+    border-color: #999999;
+}
+
+button#saveButton:disabled:hover {
+    opacity: 0.5;
+    transform: translateY(0);
+    background-color: #cccccc;
+}
+
+button#updateButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #cccccc;
+    color: #666666;
+    border-color: #999999;
+}
+
+button#updateButton:disabled:hover {
+    opacity: 0.5;
+    transform: translateY(0);
+    background-color: #cccccc;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /*background: rgba(238, 238, 238, 0.8);*/
+    background-color: transparent;
+    border-radius: 8px;
+    border: 0px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.11);    
+    overflow: hidden;
+}
+
+th, td {
+    border-spacing: 0;
+    /*border-bottom: 1px solid #ddd;*/
+    border: none
+}
+td{
+    text-align: center;
+     padding: 10px 10px;
+}
+
+thead{
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25); 
+}
+th {
+     padding: 9px 10px;
+     justify-content: center;
+    align-items: center;
+    /*background-color: #f5f5f5;*/
+    font-weight: bold;
+    color: #333;
+}
+
+tbody tr:nth-child(even){
+    background-color: lightgrey;
+}
+
+a:hover {
+    color: #c82333;
+    text-decoration: underline;
+}
+
+/* Styling for inline forms in the table */
+table form[style="display:inline;"] {
+    display: inline;
+    margin-right: 5px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+table form[style="display:inline;"] input[type="text"],
+table form[style="display:inline;"] input[type="number"],
+table form[style="display:inline;"] select,
+table form[style="display:inline;"] textarea,
+table form[style="display:inline;"] button[type="submit"] {
+    padding: 8px;
+    margin: 5px 0;
+    font-size: 0.9em;
+    box-sizing: border-box;
+    width: auto; /* Adjust width as needed */
+    display: inline-block; /* Keep them in line */
+    vertical-align: middle;
+}
+
+table form[style="display:inline;"] button[type="submit"] {
+    background-color: #007bff; /* Update button color in table */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+table form[style="display:inline;"] button[type="submit"]:hover {
+    opacity: 0.8;
+}

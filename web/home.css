@@ -1,0 +1,105 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29 Mar, 2025, 1:50:16 AM
+    Author     : jayjo
+*/
+
+/* Reset default styles */
+/* Reset default styles */
+body, h1, button {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Body styling */
+body {
+    background: #f4f4f4; /* Light background */
+    color: #333; /* Darker text for contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 40px; /* Add some padding at the top */
+    box-sizing: border-box;
+}
+p {
+    transform-origin: center bottom;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    flex-shrink: 0;  /* Ensure the footer does not shrink */
+    margin-top: auto; /* Push footer to the bottom */
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-around; /* Distribute buttons evenly */
+    background-color: #fff; /* White navbar background */
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0; /* Subtle border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 30px; /* Space between navbar and content */
+    width: 90%; /* Adjust width as needed */
+    max-width: 1260px;
+}
+
+/* Navbar buttons */
+.navbar button {
+    background-color: #007bff; /* Primary color */
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    margin: 0 10px; /* Add horizontal margin */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500; /* Slightly lighter bold */
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+/* Navbar button hover effect */
+.navbar button:hover {
+    background-color:  gold; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Navbar button images */
+.navbar button img {
+    width: 24px; /* Slightly larger icons */
+    height: 24px;
+    margin-right: 10px;
+    filter: brightness(0) invert(1); /* Invert icon color to white */
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Adjust width as needed */
+    max-width: 900px;
+}
+
+.container h1 {
+    font-size: 2.5em;
+    color: #007bff; /* Primary color for heading */
+    margin-bottom: 20px;
+    font-weight: 600;
+}

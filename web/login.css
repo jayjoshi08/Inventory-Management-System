@@ -1,0 +1,209 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 28 Mar, 2025, 10:51:46 PM
+    Author      : jayjo
+*/
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: url('images/frontpagee.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+p {
+    transform-origin: center bottom;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    flex-shrink: 0;  /* Ensure the footer does not shrink */
+    margin-top: auto; /* Push footer to the bottom */
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+/* Centered Login Box in Grey Section */
+.login-container {
+    text-align: center;
+    margin: auto;
+    width: 50%; /* Increased width for a bigger box */
+    padding: 40px; /* Increased padding for more spacing inside */
+    background: rgba(255, 255, 255, 0.15); /* Slightly less transparent */
+    border-radius: 12px; /* Slightly more rounded corners */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* More prominent shadow */
+    background: linear-gradient(230deg,#ffbf00,#626a89,#18e2fc);    
+    backdrop-filter: blur(10px);  
+}
+
+/* Login Title */
+.login-title {
+    font-size: 2.5em; /* Larger title */
+    font-weight: bold;
+    margin-bottom: 30px; /* More space below the title */
+    background-color: whitesmoke;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+/* ... other styles in your login.css ... */
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 15px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    color: black;
+    font-size: 1.0rem;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgba(203, 177, 177, 0.851);
+    border-radius: 40px;
+    padding: 20px 45px 20px 20px;
+}
+.input-box label {
+    position: absolute;
+    top: 50%;
+    pointer-events: none;
+    transform: translateY(-50%);
+    left: 20px;
+    font-size: 1.16rem;
+    color: whitesmoke;
+    border-radius: 10px;
+    padding: 0px;
+    transition: 0.4s ease-in-out;
+}
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -1px;
+    color: black;
+    font-size: 0.8rem;
+    background-color: rgba(218, 216, 216, 0.851);
+    border-radius: 10px;
+    padding: 0px 8px;
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    padding: 15px; /* Increased padding for a larger button */
+    border: none;
+    border-radius: 8px; /* More rounded corners for the button */
+    color: black;
+    background: #fff1e4e; /* Darken on hover */
+    font-size: 1.2em; 
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow to the button */
+    transition: background-color 0.6s ease, transform 0.3s ease;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+    background: yellow; /* A more modern dark blue-grey */
+
+}
+
+.login-btn:active {
+    transform: translateY(0); /* Reset transform when active */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow when active */
+}
+/*.hidden {display: none;}*/
+
+#verification{
+    color: whitesmoke;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: auto;
+    width: 35%; 
+    padding: 10px; 
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 12px; 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
+    background: linear-gradient(230deg,#ffbf00,#626a89,#18e2fc);    
+    backdrop-filter: blur(10px);  
+}
+
+.otp-group{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px;
+}
+
+.otp-group input{
+    color: whitesmoke;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    font-size: 25px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #eee;
+    background: transparent;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    display: none;
+    margin: 0;
+}
+
+
+.verifyButton {
+    color: whitesmoke;
+    margin-top: 20px;
+    width: 50%;
+    padding: 6px; /* Increased padding for a larger button */
+    border: none;
+    border-radius: 8px; /* More rounded corners for the button */
+    background: #01c7e1;
+    font-size: 1em; 
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow to the button */
+    transition: background-color 0.6s ease, transform 0.3s ease;
+    transition: color 0.6s ease, transform 0.3s ease;
+}
+
+.verifyButton:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+    background: yellow; /* A more modern dark blue-grey */
+    color: black;
+
+}
+
+button.verifyButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #cccccc;
+    color: #666666;
+    border-color: #999999;
+}
+
+button.verifyButton:disabled:hover {
+    opacity: 0.5;
+    transform: translateY(0);
+    background-color: #cccccc;
+}
